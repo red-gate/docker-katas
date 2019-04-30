@@ -2,7 +2,7 @@
 
 ## Setup
 
-- Download and install [Docker][docker-desktop]
+- Download and install [Docker Desktop][docker-desktop] (or using [Chocolatey][chocolatey] just run `choco install docker-desktop`)
 - Test your installation:
 
   ```bash
@@ -11,7 +11,9 @@
 
 ### Getting it to work alongside VirtualBox on Windows
 
-Docker [requires Hyper-V][docker-hyper-v] to work on Windows. Unfortunately, enabling Hyper-V causes VirtualBox (which you might be using with Vagrant) to stop working. If that's the case, you have two options:
+Docker [requires Hyper-V][docker-hyper-v] to work on Windows. Unfortunately, enabling Hyper-V causes VirtualBox (which you might be using with Vagrant) to stop working.
+
+If that's the case, you have two options:
 
 1. [Create a separate "No Hyper-V" boot entry][boot-entry] (requires rebooting to switch between the two)
 2. Use `docker-machine` to redirect Docker CLI commands to a VirtualBox VM (requires running a command after every reboot):
@@ -31,3 +33,4 @@ Docker [requires Hyper-V][docker-hyper-v] to work on Windows. Unfortunately, ena
 [docker-desktop]: https://www.docker.com/products/docker-desktop
 [docker-hyper-v]: https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization
 [boot-entry]: https://www.hanselman.com/blog/SwitchEasilyBetweenVirtualBoxAndHyperVWithABCDEditBootEntryInWindows81.aspx
+[chocolatey]: https://chocolatey.org
